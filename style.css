@@ -1,0 +1,328 @@
+body {
+  font-family: "Lato", sans-serif;
+  min-height: 100%;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 374px;
+  height: 556px;
+  padding: 0px 24px;
+  background-color: aqua;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  margin-top: 24px;
+  margin-bottom: 34px;
+  color: #00093e;
+  text-align: center;
+
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+.section {
+  margin-top: 24px;
+}
+
+.list-title {
+  color: #00093e;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 16px;
+}
+
+.scroll-section__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  width: 284px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #00000008;
+}
+
+.scroll-section {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  margin: 0 auto;
+  text-align: center;
+  width: 326px;
+  height: 285px;
+  border-radius: 16px;
+  background-color: #ffffff;
+}
+
+.scroll-section__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow-y: scroll;
+}
+
+.scroll-section__title {
+  margin-right: 20px;
+  color: #000;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.scroll-section__button {
+  color: #00093e;
+  font-family: Lato;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 0px; /* 0% */
+}
+
+.balls {
+  margin-bottom: 36px;
+  gap: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ball {
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ball__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #00093e;
+  font-family: Lato;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 12px;
+  width: 98px;
+  height: 98px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.ball__title {
+  color: #00093e;
+  text-align: center;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 17px;
+}
+
+.switchers {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.switcher {
+  transition: 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 16px;
+  padding: 16px 20px;
+  width: 157px;
+  height: 72px;
+  background-color: #ffffff;
+}
+
+.switcher__title {
+  text-align: left;
+  color: #000;
+  font-family: Lato;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 100%;
+}
+
+.switcher__value {
+  color: rgba(0, 0, 0, 0.35);
+  text-align: right;
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 100%; /* 14px */
+}
+
+.switcher__title_black {
+  color: #000000;
+}
+
+.switcher__title_white {
+  color: #ffffff;
+}
+
+.switcher__value_dark-gray {
+  color: #00000059;
+}
+.switcher__value_light-gray {
+  color: #ffffff59;
+}
+.switcher_white {
+  background-color: #ffffff;
+}
+
+.switcher_blue {
+  background-color: #00093e;
+}
+
+.blue-color {
+  background-color: #00093e;
+}
+
+.white-color {
+  background-color: #ffffff;
+}
+
+.button-cover,
+.knobs,
+.layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.button {
+  position: relative;
+  width: 100px;
+  height: 44px;
+  border: 4px solid #fff;
+  overflow: hidden;
+}
+
+.button.r,
+.button.r .layer {
+  border-radius: 22px;
+}
+
+.checkbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.knobs {
+  background-color: #00093e;
+  z-index: 2;
+}
+
+.layer {
+  width: 100%;
+  background-color: #ebf7fc;
+  z-index: 1;
+}
+
+#button-1 .knobs:before {
+  z-index: 10;
+  content: "ENG";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 44px;
+  height: 28px;
+  color: #000000;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+  padding: 9px 4px;
+  background-color: #ffffff;
+  border-radius: 14px;
+}
+
+#button-1 .knobs:after {
+  z-index: 1;
+  content: "RUS";
+  position: absolute;
+  top: 4px;
+  left: 44px;
+  width: 44px;
+  height: 28px;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+  padding: 9px 4px;
+  background-color: transparent;
+}
+
+#button-1 .checkbox:checked + .knobs:before {
+  content: "RUS";
+  left: 44px;
+}
+
+#button-1 .checkbox:checked + .knobs:after {
+  content: "ENG";
+  left: 4px;
+}
+
+#button-1 .knobs,
+#button-1 .knobs:before,
+#button-1 .knobs:after,
+#button-1 .layer {
+  transition: 0.3s ease all;
+}
+
+/* Стилизация скроллбара в веб-кит браузерах (Chrome, Safari) */
+/* Вы можете добавить аналогичные стили для других браузеров, если это необходимо */
+
+/* Стилизация скроллбара */
+::-webkit-scrollbar {
+  width: 2px; /* Ширина скроллбара */
+}
+
+/* Стилизация ползунка скроллбара (бегунка) */
+::-webkit-scrollbar-thumb {
+  background-color: #00093e; /* Цвет ползунка */
+  border-radius: 3px; /* Закругленные углы ползунка */
+}
+
+/* Стилизация трека скроллбара (фона) */
+::-webkit-scrollbar-track {
+  background-color: #f7f7f7; /* Цвет трека */
+  border-radius: 2px; /* Закругленные углы трека */
+}

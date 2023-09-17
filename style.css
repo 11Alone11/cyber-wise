@@ -15,13 +15,12 @@ body {
   width: 374px;
   height: 556px;
   padding: 0px 24px;
-  /* background-color: aqua; */
   background-image: url(./images/1.png), url(./images/2.png),
     url(./images/3.png), url(./images/4.png), url(./images/5.png);
-  background-size: 100% 100%; /* Размер каждого изображения в процентах */
-  background-repeat: no-repeat; /* Отключаем повторение фоновых изображений */
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   background-position: center center;
-  animation: moveBackground 20s linear infinite alternate; /* Добавляем анимацию */
+  animation: moveBackground 20s linear infinite alternate;
 }
 
 @keyframes moveBackground {
@@ -136,7 +135,7 @@ body {
   font-size: 10px;
   font-style: normal;
   font-weight: 700;
-  line-height: 0px; /* 0% */
+  line-height: 0px;
 }
 
 .balls {
@@ -215,7 +214,7 @@ body {
   font-size: 14px;
   font-style: normal;
   font-weight: 800;
-  line-height: 100%; /* 14px */
+  line-height: 100%;
 }
 
 .switcher__title_black {
@@ -345,10 +344,6 @@ body {
   transition: 0.3s ease all;
 }
 
-/* Стилизация скроллбара в веб-кит браузерах (Chrome, Safari) */
-/* Вы можете добавить аналогичные стили для других браузеров, если это необходимо */
-
-/* Стилизация скроллбара */
 ::-webkit-scrollbar {
   width: 2px;
 }

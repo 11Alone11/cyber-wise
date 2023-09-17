@@ -11,10 +11,48 @@ body {
 }
 
 .container {
+  transition: background-size 0.5s ease;
   width: 374px;
   height: 556px;
   padding: 0px 24px;
-  background-color: aqua;
+  /* background-color: aqua; */
+  background-image: url(./images/1.png), url(./images/2.png),
+    url(./images/3.png), url(./images/4.png), url(./images/5.png);
+  background-size: 100% 100%; /* Размер каждого изображения в процентах */
+  background-repeat: no-repeat; /* Отключаем повторение фоновых изображений */
+  background-position: center center;
+  animation: moveBackground 20s linear infinite alternate; /* Добавляем анимацию */
+}
+
+@keyframes moveBackground {
+  0% {
+    background-image: url(./images/1.png), url(./images/4.png),
+      url(./images/3.png), url(./images/2.png), url(./images/5.png);
+  }
+  20% {
+    background-image: url(./images/5.png), url(./images/3-b.png),
+      url(./images/4.png), url(./images/1.png), url(./images/2.png);
+  }
+  40% {
+    background-image: url(./images/2.png), url(./images/1.png),
+      url(./images/5.png), url(./images/3.png), url(./images/4-r.png);
+  }
+  50% {
+    background-size: 200% 200%;
+  }
+  60% {
+    background-image: url(./images/3-b.png), url(./images/2.png),
+      url(./images/1.png), url(./images/5.png), url(./images/4-r.png);
+  }
+  80% {
+    background-image: url(./images/4.png), url(./images/5.png),
+      url(./images/2.png), url(./images/3-l.png), url(./images/1.png);
+  }
+  100% {
+    background-size: 100% 100%;
+    background-image: url(./images/1.png), url(./images/4.png),
+      url(./images/3.png), url(./images/2.png), url(./images/5.png);
+  }
 }
 
 .flex {
@@ -56,7 +94,7 @@ body {
   padding: 16px 20px;
   width: 284px;
   height: 40px;
-  border-radius: 8px;
+  border-radius: 10px;
   background-color: #00000008;
 }
 
@@ -68,7 +106,7 @@ body {
   text-align: center;
   width: 326px;
   height: 285px;
-  border-radius: 16px;
+  border-radius: 20px;
   background-color: #ffffff;
 }
 
@@ -312,17 +350,98 @@ body {
 
 /* Стилизация скроллбара */
 ::-webkit-scrollbar {
-  width: 2px; /* Ширина скроллбара */
+  width: 2px;
 }
 
-/* Стилизация ползунка скроллбара (бегунка) */
 ::-webkit-scrollbar-thumb {
-  background-color: #00093e; /* Цвет ползунка */
-  border-radius: 3px; /* Закругленные углы ползунка */
+  background-color: #00093e;
+  border-radius: 3px;
 }
 
-/* Стилизация трека скроллбара (фона) */
 ::-webkit-scrollbar-track {
-  background-color: #f7f7f7; /* Цвет трека */
-  border-radius: 2px; /* Закругленные углы трека */
+  background-color: #f7f7f7;
+  border-radius: 2px;
+}
+
+.scroll-section__item--remove {
+  opacity: 0;
+  /* transform: translateX(-20px);  */
+  transition: 0.3s ease;
+}
+
+.footer {
+  margin-top: 44px;
+  gap: 56px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.home {
+  position: relative;
+  transition: 0.25s ease;
+  width: 28px;
+  height: 28px;
+  background-repeat: no-repeat;
+  background-image: url(./images/home.svg);
+}
+
+.home:hover {
+  transition: 0.25s ease;
+  background-image: url(./images/home-hover.svg);
+}
+
+.home-active::before {
+  margin-top: -14px;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.options-active::before {
+  margin-top: -17px;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.options {
+  transition: 0.25s ease;
+  position: relative;
+  width: 28px;
+  height: 23px;
+  background-repeat: no-repeat;
+  background-image: url(./images/options.svg);
+}
+
+.options:hover {
+  transition: 0.25s ease;
+  background-image: url(./images/options-hover.svg);
+}
+
+.cat {
+  transition: 0.25s ease;
+  width: 41px;
+  height: 41px;
+  background-repeat: no-repeat;
+  background-image: url(./images/cat.svg);
+}
+
+.cat:hover {
+  transition: 0.25s ease;
+  background-image: url(./images/cat-hover.svg);
 }
